@@ -190,6 +190,64 @@ a{
     width: 70%;
 }
 
+/* MAIN DE CONTACTO */
+
+form, input{
+    display: flex;
+    flex-direction: column;
+}
+
+legend, label, input, textarea{
+    margin-bottom: 10px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.3rem;
+    color: #758A9E;
+    width: 100%;
+}
+
+textarea{
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+fieldset{
+    box-sizing: border-box;
+    border: none;
+}
+
+.contacto__articulo{
+    margin: 20px;
+}
+
+.contacto__form{
+    background-color: #F6CEAA;
+    width: 50%;
+    height: auto;
+    margin: 10px auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border: none;
+
+}
+
+.contacto__form--button{
+    background-color: #B2BECA;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: none;
+}
+
+.contacto__titulo--xl{
+    font-size: 3rem;
+    text-align: center;
+    color: #758A9E;
+}
+
 /* CLASES DEL ASIDE */
 
 .aside{
@@ -280,16 +338,11 @@ aside div a{
         "footer footer"
     }
 
-    .nav{
+    /* .nav{
         flex-direction: row;
         align-items: flex-end;
         justify-content: space-between; 
-    }
-
-    .encabezado__box--white{
-        width: 50%;
-        margin: 0 50%;
-    }
+    } */
 
     .aside__img--sm{
         width: 50%;
