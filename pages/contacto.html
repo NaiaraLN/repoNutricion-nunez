@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NutriendoCe Vida activa y saludable</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="contenedor">
+    <!-- INICIA NAV -->
+
+    <nav id="nav" class="nav">
+        <a href="../index.html">
+            <img src="../img/logo.png" alt="Logo de NutriendoCe">
+        </a>
+        <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="sobre-mi.html">Sobre mí</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="recetas.html">Recetas</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- INICIA HEADER -->
+
+    <header id="header" class="encabezado">
+        <div class="encabezado__box--white">
+            <p>"Nuestro cuerpo es el mismo, en todas las estaciones del año, y toda la vida. Tratalo con Amor"</p>
+        </div>
+    </header>
+
+    <!-- INICIA MAIN -->
+
+    <main id="main" class="contacto">
+        <section>
+            <article class="contacto__articulo">
+                <h1 class="contacto__titulo--xl">Pedí tu consulta</h1>
+                <!--Inicia el form-->
+                <form action="consulta.php" class="contacto__form">
+                    <fieldset>
+                        <legend>Datos personales</legend>
+                        <label for="nombre">Nombre y Apellido</label>
+                        <input type="text" placeholder="Naiara Nuñez" name="nombre" id="nombre">
+                        
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="mail@mail.com" name="email" id="email">
+                        
+                        <label for="tel">Teléfono</label>
+                        <input type="tel" placeholder="(código de área) número" name="tel" id="tel">
+                </fieldset>
+                
+                <label for="mensaje">Dejá tu mensaje</label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+                
+                <input type="reset" value="Cancelar" class="contacto__form--button">
+                <input type="submit" value="Enviar" class="contacto__form--button">
+                
+                </form>
+                <!--cierra el form-->
+            </article>
+        </section>
+    </main>
+
+    <!-- INICIA ASIDE -->
+
+    <aside id="aside" class="aside">
+            <h3 class="aside__titulo--sm">Links de interés</h3>
+            <div class="aside__img--center"> 
+                <a href="https://www.linkedin.com/mwlite/in/celeste-chambeaud-licenciada-en-nutrici%C3%B3n-629a03a3" target="_blank">
+                    <img src="../img/linkedin.png" alt="icono de linkedin" class="aside__img--sm">
+                </a>
+            </div>
+            <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, et ad?</blockquote>
+            <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas, et ad?</blockquote>
+        </aside>
+    
+    <!-- INICIA FOOTER -->
+    
+    <footer id="footer"  class="pie">
+        <div class="pie__icon--right"> 
+            <img src="../img/ce.png" alt="Ícono de NutriendoCe" class="pie__icon--md" >
+        </div>
+        <a href="https://www.instagram.com/nutriendoce/" target="_blank">
+            <img src="../img/instagram.jpeg" alt="Instagram de NutriendoCe" class="pie__icon--sm">
+            <p>nutriendoce</p>
+        </a>
+        <a href="https://m.facebook.com/nutriendoce?ref=bookmarks" target="_blank" >
+            <img src="../img/facebook.png" alt="Facebook de NutriendoCe" class="pie__icon--sm">
+            <p>@nutriendoce</p>
+        </a>
+        
+        <img src="../img/gmail.png" alt="Gmail de NutriendoCe" class="pie__icon--sm">
+            <p>nutriendoce@gmail.com</p>
+       <p>1123456789</p>
+       
+    </footer>
+    </div>
+</body>
+</html>
