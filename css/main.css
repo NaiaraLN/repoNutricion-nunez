@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Josefin+Sans&display=swap");
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  font-size: 62.5%; }
+
+.contenedor {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "nav" "header" "main" "aside" "footer"; }
+
+.nav {
+  grid-area: nav; }
+
+.header {
+  grid-area: header; }
+
+.main {
+  grid-area: main; }
+
+.aside {
+  grid-area: aside; }
+
+.footer {
+  grid-area: footer; }
+
+.nav {
+  background-color: rgba(246, 206, 170, 0.75);
+  top: 0;
+  padding: 10px 30px; }
+  .nav ul li {
+    list-style: none;
+    margin-right: 10px; }
+    .nav ul li a {
+      font-size: 2rem;
+      text-decoration: none;
+      color: #758A9E;
+      display: block;
+      padding: 0.5rem 1rem; }
+
+.navImg {
+  width: 150px;
+  margin-bottom: 10px; }
+
+.mainYo section article div p {
+  text-align: center;
+  color: #758A9E;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem; }
+
+.main__yo--articulo {
+  background-color: #8DB173;
+  width: 90%;
+  height: auto;
+  margin: 10px auto;
+  padding: 20px 20px;
+  box-sizing: border-box;
+  border: none; }
+
+.yo__titulo--xxl {
+  font-size: 4.5rem;
+  line-height: 5rem;
+  text-align: center;
+  color: #317302;
+  font-family: "Josefin Sans", sans-serif; }
+
+.yo__img--center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px; }
+
+.yo__img--md {
+  width: 40%; }
+
+footer p {
+  color: #B2BECA;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2rem; }
+
+.pie {
+  background-color: #317302;
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column; }
+  .pie a {
+    color: #B2BECA;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    display: flex;
+    font-family: "Josefin Sans", sans-serif; }
+  .pie div {
+    display: flex;
+    flex-direction: row; }
+
+.pie__icon--sm {
+  width: 30px; }
+
+.pie__icon--md {
+  width: 50px; }
+
+.pie__icon--right {
+  display: flex;
+  justify-content: flex-end; }
+
+@media (min-width: 992px) {
+  .nav ul li {
+    border-left: 1px solid #758A9E;
+    padding: 10px 5px; }
+    .nav ul li a {
+      background-image: linear-gradient(currentColor, currentColor);
+      background-position: 0% 100%;
+      background-repeat: no-repeat;
+      background-size: 0% 2px;
+      transition: background-size .3s; }
+      .nav ul li a:hover {
+        color: #317302;
+        font-weight: 600;
+        background-size: 100% 2px;
+        cursor: pointer; }
+  .navImg {
+    width: 250px;
+    margin-bottom: 10px; } }
+
+@media (min-width: 1024px) {
+  .main__yo--articulo div p {
+    padding: 10px; }
+  .yo__img--center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    width: 100%; }
+  .yo__img--md {
+    width: 100%; }
+  .div__yo {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: center;
+    align-items: center;
+    margin: 15px; }
+  .div__experiencia {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    margin: 15px; } }

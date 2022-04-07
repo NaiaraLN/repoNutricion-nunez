@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+// LAYOUT
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "nav" "header" "main" "aside" "footer";
+    
+}
+
+.nav{
+    grid-area: nav;
+
+}
+
+.header{
+    grid-area: header;
+    
+}
+
+.main{
+    grid-area: main;
+}
+
+.aside{
+    grid-area: aside;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+// variables globales
+$mainColor:rgba(246, 206, 170, 0.75);
+$secondColor:#758A9E;
+$thirdColor:#317302;
+$fourthColor:#B2BECA;
+$keyColor:#8DB173;
+
+// sizing
+$w-100:100%;
+$w-90:90%;
+$w-50:50%;
+$w-40:40%;
+

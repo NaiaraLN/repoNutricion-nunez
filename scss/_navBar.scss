@@ -1,0 +1,23 @@
+.nav{
+    background-color: $mainColor;
+    top: 0;
+    padding: 10px 30px;
+    ul{
+        li{
+            list-style: none;
+            margin-right: 10px;
+            a{
+                font-size: $textSm;
+                text-decoration: none;
+                color: $secondColor;
+                display: block;
+                padding: 0.5rem 1rem;
+            }
+        }
+    }
+
+}
+.navImg{
+    width: 150px;
+    margin-bottom: 10px;
+}

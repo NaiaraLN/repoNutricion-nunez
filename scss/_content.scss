@@ -1,0 +1,35 @@
+.mainYo section article div p{
+    text-align: center;
+    color: $secondColor;
+    font-family: $fontMain;
+    font-size: $textSm;
+}
+.main__yo--articulo{
+    background-color: $keyColor;
+    width: $w-90;
+    height: auto;
+    margin: 10px auto;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    border: none;
+}
+
+.yo__titulo--xxl{
+    font-size: $textXxl;
+    line-height: 5rem;
+    text-align: center;
+    color: $thirdColor;
+    font-family: $fontMain;
+}
+
+
+.yo__img--center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.yo__img--md{
+    width: $w-40;
+}
