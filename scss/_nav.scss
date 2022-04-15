@@ -1,7 +1,8 @@
 .nav{
-    background-color: $mainColor;
+    background-color: map-get($map: $colores, $key: 'uno');
     top: 0;
     padding: 10px 30px;
+    z-index: 999;
     ul{
         li{
             list-style: none;
@@ -9,7 +10,7 @@
             a{
                 font-size: $textSm;
                 text-decoration: none;
-                color: $secondColor;
+                color: map-get($map: $colores, $key: 'dos');
                 display: block;
                 padding: 0.5rem 1rem;
             }
@@ -18,6 +19,6 @@
 
 }
 .navImg{
-    width: 150px;
+    width: 170px;
     margin-bottom: 10px;
 }

@@ -1,0 +1,93 @@
+*{
+    font-family: $fontMain;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// SELECTORES DE ETIQUETA
+html{
+    font-size: 62.5%;
+}
+
+// GRID LAYOUT
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "nav" "header" "main" "footer";
+    
+}
+
+.nav{
+    grid-area: nav;
+
+}
+
+.header{
+    grid-area: header;
+    
+}
+
+.main{
+    grid-area: main;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+// VARIABLES GLOBALES
+
+// sizing
+$w-100:100%;
+$w-90:90%;
+$w-80:80%;
+$w-70:70%;
+$w-60:60%;
+$w-50:50%;
+$w-40:40%;
+$w-30:30%;
+
+// mixin
+@mixin text($font-size,$line-height){
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: 400;
+}
+
+@mixin flex($justify,$align,$direction) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align; 
+    flex-direction: $direction;
+}
+
+@mixin m-p($margin,$padding){
+    margin: $margin;
+    padding: $padding;
+}
+
+// MAP
+
+$colores:(
+    'uno': rgba(246, 206, 170, 0.75),
+    'dos': #758A9E,
+    'tres': #317302,
+    'cuatro': #B2BECA,
+    'cinco': #8DB173,
+    'seis': #F6F2A8,
+    'siete': #E99481,
+    'ocho': rgba(178, 190, 202, 0.5),
+    'nueve': black,
+    'diez': #F6CEAA,
+    'once': #F07859,
+    'doce': white,
+
+)
+
+
+
+
+
+
