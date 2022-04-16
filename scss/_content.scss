@@ -1,19 +1,20 @@
 // selectores de etiqueta
 p,a{
     @include text($textSm,2.4rem);
-    color: map-get($map: $colores, $key: 'dos');
+    color: map-get($map: $colores, $key: 'nueve');
 }
 a{
     text-decoration: none;
-    color: map-get($map: $colores, $key: 'dos');
+    color: map-get($map: $colores, $key: 'nueve');
 }
 
 h1,h2{
-    color: map-get($map: $colores, $key: 'tres');
+    color: map-get($map: $colores, $key: 'nueve');
+    font-weight: 600;
 }
 
 h3{
-    color: map-get($map: $colores, $key: 'dos');
+    color: map-get($map: $colores, $key: 'nueve');
 }
 
 /* MAIN DE INDEX */
@@ -27,27 +28,41 @@ h3{
         }
     }
     .index__titulo--xxl{
-        @include text($textXl,3.5rem);
+        @include text($textXl,4rem);
         text-align: center;
     }
     
     .index__titulo--xl{
-        @include text($textSsm,$textSm);
+        @include text($textMd,3rem);
         text-align: center;
     }
     
     .index__img--center{
         @include flex(space-around, center, column);
         margin: 15px;
+
+        // breakpoint - acomodo imagen
+        @media only screen and (min-width: 1024px){
+            @include flex(center,center,none);
+            margin: 15px 15px;
+            width: $w-80;
+        }
         .index__img--md{
             width: $w-50;
+
+            // breakpoint - agrando imagen
+            @media only screen and (min-width: 1024px){
+                width: $w-80;
+            }
         }
+
     }
     
     
     .index__articulo--yo{
-        background-color: map-get($map: $colores, $key: 'cinco'); 
-        width: $w-90;
+        // background-image: url(../img/fondo-verde-min.png);
+        background: linear-gradient();
+        width: $w-100;
         height: auto;
         @include m-p(10px auto, 10px 20px);
         box-sizing: border-box;
@@ -58,17 +73,46 @@ h3{
     .divButton{
         @include flex(space-around, center, row);
         align-content: center;
-        &:hover{
-            color: map-get($map: $colores, $key: 'tres');
-            font-weight: 600;
-            background-size: 100% 2px;
+
+        a:hover{
+            color: map-get($map: $colores, $key: 'nueve');
+        }
+
+        // breakpoint - w-60
+        @media only screen and (min-width: 1024px){
+            width: $w-70;
+        }
+
+        .btn-index{
+            background-color: map-get($map: $colores, $key: 'siete');
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 150px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+
+            &:hover{
+                transform: scale(1.1);
+                box-shadow: 5px 7px 5px 2px rgba(0,0,0,0.75);
+                -webkit-box-shadow: 5px 7px 5px 2px rgba(0,0,0,0.75);
+                -moz-box-shadow: 5px 7px 5px 2px rgba(0,0,0,0.75);
+            }
+        }
+    }
+    // breakpoint - divYo
+    @media only screen and (min-width: 1024px){
+        .divYo{
+            @include flex(none,center,row-reverse);
+            text-align: left;
+            margin: 20px;
         }
     }
     
     
     .index__section--blog{
+        background-color: map-get($map: $colores, $key: 'doce');
         @extend .index__articulo--yo;
-        background-color: map-get($map: $colores, $key: 'seis'); 
     }
     
     .index__section--recetas{
@@ -80,20 +124,52 @@ h3{
     .index__div--flex{
         display: flex;
         flex-direction: column;
+
+        // breackpoint -flex row
+        @media only screen and (min-width: 992px){
+            @include flex(none,none,row);
+        }
     }
     
     .index__articulo--white{
         background-color: map-get($map: $colores, $key: 'ocho');
         @include m-p(10px auto, 10px 20px);
         width: $w-70;
-        @include flex(none,center,column);
+        @include flex(center,center,column);
+
+        // breackpoint
+        @media only screen and (min-width: 992px){
+            margin: 10px 10px;
+        }
+
+        // breakpoint - 1200px
+        @media only screen and (min-width: 1200px){
+            width: $w-30;
+        }
+        
     }
     
     .linkHover a:hover{
         color: map-get($map: $colores, $key: 'tres');
         font-weight: 600;
-        background-size: 100% 2px;
+        background-size: 100% 2px;   
     }
+    // breackpoint -links del index en la parte de blog
+        @media only screen and (min-width: 992px){
+            .linkHover a{
+                background-image: linear-gradient(currentColor, currentColor);
+                background-position: 0% $w-100;
+                background-repeat: no-repeat;
+                background-size: 0% 2px;
+                transition: background-size .3s;
+                &:hover{
+                    color: map-get($map: $colores, $key: 'tres');
+                    font-weight: 600;
+                    background-size: $w-100 2px;
+                    cursor: pointer;
+                }
+            }
+        }
 }
 
 // MAIN DE SOBRE MI
@@ -114,6 +190,16 @@ h3{
         height: auto;
         box-sizing: border-box;
         border: none;
+
+        // breakpoint
+        @media only screen and (min-width: 1024px){
+            div{
+                p{
+                    padding: 10px;
+                }
+            }
+        }
+        
     }
     
     .yo__titulo--xxl{
@@ -125,10 +211,37 @@ h3{
     .yo__img--center{
         @include flex(center,center,none);
         margin: 15px;
+
+        // breakpoint - agrando img
+        @media only screen and (min-width: 1024px){
+            @include flex(center,center,none);
+            margin: 10px auto;
+            width: $w-100;
+        }
     }
     
     .yo__img--md{
         width: $w-60;
+
+        // breakpoint - agrando img
+        @media only screen and (min-width: 1024px){
+            width: $w-100;
+        }
+    }
+
+    // breakpoint div__yo
+    @media only screen and (min-width: 1024px){
+        .div__yo{
+            @include flex(none,center,row-reverse);
+            text-align: center;
+            margin: 15px;
+        }
+        
+        .div__experiencia{
+            @extend .div__yo;
+            @include flex(none,center,row);
+        }
+        
     }
 }
 
@@ -138,22 +251,37 @@ h3{
         article{
             div{
                 p{
-                    text-align: justify;  
+                    text-align: center;  
                 }
             }
         }
     }
     .blog__articulo{
-    background-color: map-get($map: $colores, $key: 'seis');
-    width: $w-90;
-    height: auto;
-    @include m-p(10px auto, 20px 20px);
-    box-sizing: border-box;
-    border: none;
+        background-color: map-get($map: $colores, $key: 'seis');
+        width: $w-90;
+        height: auto;
+        @include m-p(10px auto, 20px 20px);
+        box-sizing: border-box;
+        border: none;
+
+        // breakpoint
+        @media only screen and (min-width: 1024px){
+            div{
+                p{
+                    padding: 5px;
+                }
+            }
+        }
+
     }
     .blog__titulo--xxl{
         @include text($textXl,3.5rem);
         text-align: center;
+
+        // breackpoint- agrando título
+        @media only screen and (min-width: 992px){
+            @include text($textXxl,5rem);
+        }
     }
 
     .btn-blog{
@@ -173,7 +301,7 @@ h3{
         article{
             div{
                 p{
-                    text-align: left;
+                    text-align: center;
                 }
             }
         }
@@ -185,10 +313,23 @@ h3{
         @include m-p(10px auto, 20px 20px);
         box-sizing: border-box;
         border: none;
+
+        @media only screen and (min-width: 1024px){
+            div{
+                p{
+                    padding: 5px;
+                }
+            }
+        }
     }
     .recetas__titulo--xxl{
         @include text($textXl,3.5rem);
         text-align: center;
+
+        // breakpoint- agrando titulo
+        @media only screen and (min-width: 992px){
+            @include text($textXxl,5rem);
+        }
     }
     .btn-recetas{
         color: map-get($map: $colores, $key: 'nueve');
@@ -228,6 +369,11 @@ fieldset{
         box-sizing: border-box;
         border: none;
 
+        // breackpoint - w-100
+        @media only screen and (min-width: 992px){
+            width: $w-50;
+        }
+
     } 
     .contactoText{
         margin-bottom: 10px;
@@ -235,9 +381,19 @@ fieldset{
         @include text($textSsm,$textSm);
         color: map-get($map: $colores, $key: 'dos');
         width: $w-100;
+
+        // breackpoint - agrando letra
+        @media only screen and (min-width: 992px){
+            font-size: $textSm;
+        }
     }
     .contactoButton{
         @include flex(none,none,column);
+
+        // breakpoint 
+        @media only screen and (min-width: 1024px){
+            @include flex(space-evenly,center,row);
+        }
     }
 
     .contacto__form--button{
@@ -250,6 +406,10 @@ fieldset{
         border: none;
         &:hover{
             background-color: map-get($map: $colores, $key: 'once');
+        }
+
+        @media only screen and (min-width: 1024px){
+            width: $w-50;
         }
     }
 

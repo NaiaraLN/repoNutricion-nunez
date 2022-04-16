@@ -2,37 +2,68 @@ footer{
     p{
         font-family: $fontMain;
         @include text($textSm,2.5rem);
-        color: map-get($map: $colores, $key: 'cuatro');
+        color: map-get($map: $colores, $key: 'tres');
     }
 }
 .pie{
-    background-color: map-get($map: $colores, $key: 'tres');
+    background-image: url(../img/footer.jpg);
     padding: 30px 0;
     display: flex;
     flex-direction: column;
     a{
         @include text($textSm,2.5rem);
-        color: map-get($map: $colores, $key: 'cuatro');
+        color: map-get($map: $colores, $key: 'tres');
         display: flex;
         font-family: $fontMain;
     }
-    div{
-        display: flex;
-        flex-direction: row;
+    // div{
+    //     display: flex;
+    //     flex-direction: row;
         
+    // }
+    .pie__icon--sm{
+        width: 30px;
+        color: map-get($map: $colores, $key: 'dos');
     }
-    
-}
-.pie__icon--sm{
-    width: 30px;
+    .ig-icon{
+        &:hover{
+            color: #C0007A;
+        }
+    }
+    .fc-icon{
+        &:hover{
+            color: #1877F2;
+        }
+    }
+    .mail-icon{
+        &:hover{
+            color: #BB001B;
+        }
+    }
+    .wh-icon{
+        &:hover{
+            color: #25D366;
+        }
+    }
+    .pie__icon--right{
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    .pie__div--icon{
+        display: flex;
+        margin: auto;
+        
+
+    }
+    .pie__div--redes{
+        @include flex(space-around,center,row);
+    }
+
+
 }
 
-.pie__icon--md{
-    width: 50px;
-}
 
-.pie__icon--right{
-    display: flex;
-    justify-content: flex-end;
 
-}
+

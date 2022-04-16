@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Josefin+Sans&display=swap");
 * {
   font-family: "Josefin Sans", sans-serif;
@@ -35,46 +34,70 @@ html {
   .nav ul li {
     list-style: none;
     margin-right: 10px; }
+    @media only screen and (min-width: 992px) {
+      .nav ul li {
+        border-left: 1px solid #758A9E;
+        padding: 10px 5px; } }
     .nav ul li a {
       font-size: 2rem;
       text-decoration: none;
       color: #758A9E;
       display: block;
       padding: 0.5rem 1rem; }
+      @media only screen and (min-width: 992px) {
+        .nav ul li a {
+          background-image: linear-gradient(currentColor, currentColor);
+          background-position: 0% 100%;
+          background-repeat: no-repeat;
+          background-size: 0% 2px;
+          transition: background-size .3s; }
+          .nav ul li a:hover {
+            color: #317302;
+            font-weight: 600;
+            background-size: 100% 2px;
+            cursor: pointer; } }
 
 .navImg {
   width: 170px;
   margin-bottom: 10px; }
+  @media only screen and (min-width: 992px) {
+    .navImg {
+      width: 250px;
+      margin-bottom: 10px; } }
+  @media only screen and (min-width: 1024px) {
+    .navImg {
+      width: 300px; } }
 
 p, a {
   font-size: 2rem;
   line-height: 2.4rem;
   font-weight: 400;
-  color: #758A9E; }
+  color: black; }
 
 a {
   text-decoration: none;
-  color: #758A9E; }
+  color: black; }
 
 h1, h2 {
-  color: #317302; }
+  color: black;
+  font-weight: 600; }
 
 h3 {
-  color: #758A9E; }
+  color: black; }
 
 /* MAIN DE INDEX */
 .index section article p {
   text-align: justify; }
 
 .index .index__titulo--xxl {
-  font-size: 3rem;
-  line-height: 3.5rem;
+  font-size: 3.5rem;
+  line-height: 4rem;
   font-weight: 400;
   text-align: center; }
 
 .index .index__titulo--xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 2.5rem;
+  line-height: 3rem;
   font-weight: 400;
   text-align: center; }
 
@@ -84,12 +107,23 @@ h3 {
   align-items: center;
   flex-direction: column;
   margin: 15px; }
+  @media only screen and (min-width: 1024px) {
+    .index .index__img--center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: none;
+      margin: 15px 15px;
+      width: 80%; } }
   .index .index__img--center .index__img--md {
     width: 50%; }
+    @media only screen and (min-width: 1024px) {
+      .index .index__img--center .index__img--md {
+        width: 80%; } }
 
 .index .index__articulo--yo, .index .index__section--blog, .index .index__section--recetas {
-  background-color: #8DB173;
-  width: 90%;
+  background: linear-gradient();
+  width: 100%;
   height: auto;
   margin: 10px auto;
   padding: 10px 20px;
@@ -102,13 +136,36 @@ h3 {
   align-items: center;
   flex-direction: row;
   align-content: center; }
-  .index .divButton:hover {
-    color: #317302;
-    font-weight: 600;
-    background-size: 100% 2px; }
+  .index .divButton a:hover {
+    color: black; }
+  @media only screen and (min-width: 1024px) {
+    .index .divButton {
+      width: 70%; } }
+  .index .divButton .btn-index {
+    background-color: #E99481;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 150px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center; }
+    .index .divButton .btn-index:hover {
+      transform: scale(1.1);
+      box-shadow: 5px 7px 5px 2px rgba(0, 0, 0, 0.75);
+      -webkit-box-shadow: 5px 7px 5px 2px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 5px 7px 5px 2px rgba(0, 0, 0, 0.75); }
+
+@media only screen and (min-width: 1024px) {
+  .index .divYo {
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    flex-direction: row-reverse;
+    text-align: left;
+    margin: 20px; } }
 
 .index .index__section--blog {
-  background-color: #F6F2A8; }
+  background-color: white; }
 
 .index .index__section--recetas {
   background-color: #E99481; }
@@ -116,6 +173,12 @@ h3 {
 .index .index__div--flex {
   display: flex;
   flex-direction: column; }
+  @media only screen and (min-width: 992px) {
+    .index .index__div--flex {
+      display: flex;
+      justify-content: none;
+      align-items: none;
+      flex-direction: row; } }
 
 .index .index__articulo--white {
   background-color: rgba(178, 190, 202, 0.5);
@@ -123,14 +186,33 @@ h3 {
   padding: 10px 20px;
   width: 70%;
   display: flex;
-  justify-content: none;
+  justify-content: center;
   align-items: center;
   flex-direction: column; }
+  @media only screen and (min-width: 992px) {
+    .index .index__articulo--white {
+      margin: 10px 10px; } }
+  @media only screen and (min-width: 1200px) {
+    .index .index__articulo--white {
+      width: 30%; } }
 
 .index .linkHover a:hover {
   color: #317302;
   font-weight: 600;
   background-size: 100% 2px; }
+
+@media only screen and (min-width: 992px) {
+  .index .linkHover a {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s; }
+    .index .linkHover a:hover {
+      color: #317302;
+      font-weight: 600;
+      background-size: 100% 2px;
+      cursor: pointer; } }
 
 .mainYo section article div p {
   text-align: center; }
@@ -143,6 +225,9 @@ h3 {
   height: auto;
   box-sizing: border-box;
   border: none; }
+  @media only screen and (min-width: 1024px) {
+    .mainYo .main__yo--articulo div p {
+      padding: 10px; } }
 
 .mainYo .yo__titulo--xxl {
   font-size: 4.5rem;
@@ -156,12 +241,37 @@ h3 {
   align-items: center;
   flex-direction: none;
   margin: 15px; }
+  @media only screen and (min-width: 1024px) {
+    .mainYo .yo__img--center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: none;
+      margin: 10px auto;
+      width: 100%; } }
 
 .mainYo .yo__img--md {
   width: 60%; }
+  @media only screen and (min-width: 1024px) {
+    .mainYo .yo__img--md {
+      width: 100%; } }
+
+@media only screen and (min-width: 1024px) {
+  .mainYo .div__yo, .mainYo .div__experiencia {
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    flex-direction: row-reverse;
+    text-align: center;
+    margin: 15px; }
+  .mainYo .div__experiencia {
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    flex-direction: row; } }
 
 .blog section article div p {
-  text-align: justify; }
+  text-align: center; }
 
 .blog .blog__articulo {
   background-color: #F6F2A8;
@@ -171,12 +281,20 @@ h3 {
   padding: 20px 20px;
   box-sizing: border-box;
   border: none; }
+  @media only screen and (min-width: 1024px) {
+    .blog .blog__articulo div p {
+      padding: 5px; } }
 
 .blog .blog__titulo--xxl {
-  font-size: 3rem;
+  font-size: 3.5rem;
   line-height: 3.5rem;
   font-weight: 400;
   text-align: center; }
+  @media only screen and (min-width: 992px) {
+    .blog .blog__titulo--xxl {
+      font-size: 4.5rem;
+      line-height: 5rem;
+      font-weight: 400; } }
 
 .blog .btn-blog {
   color: black;
@@ -187,7 +305,7 @@ h3 {
     box-shadow: 12px 16px 4px -1px rgba(117, 138, 158, 0.75); }
 
 .recetas section article div p {
-  text-align: left; }
+  text-align: center; }
 
 .recetas .recetas__articulo {
   background-color: #E99481;
@@ -197,12 +315,20 @@ h3 {
   padding: 20px 20px;
   box-sizing: border-box;
   border: none; }
+  @media only screen and (min-width: 1024px) {
+    .recetas .recetas__articulo div p {
+      padding: 5px; } }
 
 .recetas .recetas__titulo--xxl {
-  font-size: 3rem;
+  font-size: 3.5rem;
   line-height: 3.5rem;
   font-weight: 400;
   text-align: center; }
+  @media only screen and (min-width: 992px) {
+    .recetas .recetas__titulo--xxl {
+      font-size: 4.5rem;
+      line-height: 5rem;
+      font-weight: 400; } }
 
 .recetas .btn-recetas {
   color: black;
@@ -237,6 +363,9 @@ fieldset {
     padding: 10px 20px;
     box-sizing: border-box;
     border: none; }
+    @media only screen and (min-width: 992px) {
+      .contacto__articulo .contacto__form {
+        width: 50%; } }
   .contacto__articulo .contactoText {
     margin-bottom: 10px;
     font-family: "Josefin Sans", sans-serif;
@@ -245,11 +374,20 @@ fieldset {
     font-weight: 400;
     color: #758A9E;
     width: 100%; }
+    @media only screen and (min-width: 992px) {
+      .contacto__articulo .contactoText {
+        font-size: 2rem; } }
   .contacto__articulo .contactoButton {
     display: flex;
     justify-content: none;
     align-items: none;
     flex-direction: column; }
+    @media only screen and (min-width: 1024px) {
+      .contacto__articulo .contactoButton {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row; } }
   .contacto__articulo .contacto__form--button {
     background-color: #B2BECA;
     color: white;
@@ -264,8 +402,11 @@ fieldset {
     border: none; }
     .contacto__articulo .contacto__form--button:hover {
       background-color: #F07859; }
+    @media only screen and (min-width: 1024px) {
+      .contacto__articulo .contacto__form--button {
+        width: 50%; } }
   .contacto__articulo .contacto__titulo--xl {
-    font-size: 3rem;
+    font-size: 3.5rem;
     text-align: center;
     color: #758A9E; }
 
@@ -274,10 +415,10 @@ footer p {
   font-size: 2rem;
   line-height: 2.5rem;
   font-weight: 400;
-  color: #B2BECA; }
+  color: #317302; }
 
 .pie {
-  background-color: #317302;
+  background-image: url(../img/footer.jpg);
   padding: 30px 0;
   display: flex;
   flex-direction: column; }
@@ -285,191 +426,28 @@ footer p {
     font-size: 2rem;
     line-height: 2.5rem;
     font-weight: 400;
-    color: #B2BECA;
+    color: #317302;
     display: flex;
     font-family: "Josefin Sans", sans-serif; }
-  .pie div {
+  .pie .pie__icon--sm {
+    width: 30px;
+    color: #758A9E; }
+  .pie .ig-icon:hover {
+    color: #C0007A; }
+  .pie .fc-icon:hover {
+    color: #1877F2; }
+  .pie .mail-icon:hover {
+    color: #BB001B; }
+  .pie .wh-icon:hover {
+    color: #25D366; }
+  .pie .pie__icon--right {
     display: flex;
-    flex-direction: row; }
-
-.pie__icon--sm {
-  width: 30px; }
-
-.pie__icon--md {
-  width: 50px; }
-
-.pie__icon--right {
-  display: flex;
-  justify-content: flex-end; }
-
-@media (max-width: 768px) {
-  /* CAMBIOS EN INDEX SOBRE MI */
-  .yo__img--md {
-    width: 50%; } }
-
-@media (min-width: 992px) {
-  /* AGRANDO LOGO DE LA NAV Y AGREGO ANIMACIONES */
-  .nav ul li {
-    border-left: 1px solid #758A9E;
-    padding: 10px 5px; }
-    .nav ul li a {
-      background-image: linear-gradient(currentColor, currentColor);
-      background-position: 0% 100%;
-      background-repeat: no-repeat;
-      background-size: 0% 2px;
-      transition: background-size .3s; }
-      .nav ul li a:hover {
-        color: #317302;
-        font-weight: 600;
-        background-size: 100% 2px;
-        cursor: pointer; }
-  .navImg {
-    width: 250px;
-    margin-bottom: 10px; }
-  /* INDEX */
-  .index__articulo--white {
-    margin: 10px 10px; }
-  /* Links del index en la parte de sobre mi */
-  .divButton a {
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .3s; }
-    .divButton a:hover {
-      color: #317302;
-      font-weight: 600;
-      background-size: 100% 2px;
-      cursor: pointer; }
-  /* links del index en la parte de blog */
-  .linkHover a {
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .3s; }
-    .linkHover a:hover {
-      color: #317302;
-      font-weight: 600;
-      background-size: 100% 2px;
-      cursor: pointer; }
-  .index__div--flex {
+    justify-content: flex-end; }
+  .pie .pie__div--icon {
     display: flex;
-    justify-content: none;
-    align-items: none;
-    flex-direction: row; }
-  /* Contacto agrando letra */
-  .contactoText {
-    font-size: 2rem; }
-  .contacto__form {
-    width: 50%; }
-  /* BLOG TITULOS */
-  .blog__titulo--xxl {
-    font-size: 4.5rem;
-    line-height: 5rem;
-    font-weight: 400; }
-  /* RECETAS TITULOS */
-  .recetas__titulo--xxl {
-    font-size: 4.5rem;
-    line-height: 5rem;
-    font-weight: 400; } }
-
-@media (min-width: 1024px) {
-  /* Agrando el logo de la nav */
-  .navImg {
-    width: 300px; }
-  /* acomodo texto y la imágen de "sobre mi" en index*/
-  .index .index__img--center {
+    margin: auto; }
+  .pie .pie__div--redes {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: none;
-    margin: 15px 15px;
-    width: 100%; }
-  .index__img--md {
-    width: 100%; }
-  .divYo {
-    display: flex;
-    justify-content: none;
-    align-items: center;
-    flex-direction: row-reverse;
-    text-align: left;
-    margin: 15px; }
-  .divButton {
-    width: 50%; }
-  /* CONTACTO botones */
-  .contactoButton {
-    display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     flex-direction: row; }
-  .contacto__form--button {
-    width: 50%; }
-  /* CAMBIOS EN MAIN DE SOBRE MI */
-  .main__yo--articulo div p {
-    padding: 10px; }
-  .yo__img--center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: none;
-    margin: 10px auto;
-    width: 100%; }
-  .yo__img--md {
-    width: 100%; }
-  .div__yo, .div__experiencia {
-    display: flex;
-    justify-content: none;
-    align-items: center;
-    flex-direction: row-reverse;
-    text-align: center;
-    margin: 15px; }
-  /* CAMBIOS EN MAIN DE BLOG */
-  .blog__articulo div p {
-    padding: 10px; }
-  .blog__img--center {
-    display: flex;
-    justify-content: none;
-    align-items: center;
-    flex-direction: row-reverse;
-    text-align: center;
-    margin: 15px; }
-  .blog__img--md {
-    width: 100%; }
-  .div__blog {
-    display: flex;
-    justify-content: none;
-    align-items: center;
-    flex-direction: row;
-    text-align: center;
-    margin: 15px; }
-  /* Cambios en MAIN DE RECETAS */
-  .recetas__articulo div p {
-    padding: 10px; }
-  .recetas__img--center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: none;
-    margin: 10px auto;
-    width: 100%; }
-  .recetas__img--md {
-    width: 100%; }
-  .div__recetas {
-    display: flex;
-    justify-content: none;
-    align-items: center;
-    flex-direction: row;
-    text-align: center;
-    margin: 15px; } }
-
-@media (min-width: 1200px) {
-  .index__div--flex {
-    display: flex;
-    flex-direction: row; }
-  .index__articulo--white {
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; } }

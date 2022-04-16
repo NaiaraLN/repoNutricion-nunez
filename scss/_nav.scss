@@ -7,12 +7,33 @@
         li{
             list-style: none;
             margin-right: 10px;
+
+            // breakpoint - agrego animaciones
+            @media only screen and(min-width: 992px){
+                border-left: 1px solid map-get($map: $colores, $key: 'dos');
+                padding: 10px 5px;
+            }
             a{
                 font-size: $textSm;
                 text-decoration: none;
                 color: map-get($map: $colores, $key: 'dos');
                 display: block;
                 padding: 0.5rem 1rem;
+
+                // breakpoint - agrego animaciones
+                @media only screen and(min-width: 992px){
+                    background-image: linear-gradient(currentColor, currentColor);
+                    background-position: 0% $w-100;
+                    background-repeat: no-repeat;
+                    background-size: 0% 2px;
+                    transition: background-size .3s;
+                    &:hover{
+                        color:map-get($map: $colores, $key: 'tres');
+                        font-weight: 600;
+                        background-size: $w-100 2px;
+                        cursor: pointer;
+                    }
+                }
             }
         }
     }
@@ -21,4 +42,16 @@
 .navImg{
     width: 170px;
     margin-bottom: 10px;
+
+    // breackpoint 992px - agrando logo
+    @media only screen and(min-width: 992px){
+        width: 250px;
+        margin-bottom: 10px;
+    }
+
+    // breakpoint 1024 - agrando logo
+    @media only screen and(min-width: 1024px){
+        width: 300px;
+    }
+
 }
