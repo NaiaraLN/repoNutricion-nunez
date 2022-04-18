@@ -16,14 +16,47 @@ footer{
         display: flex;
         font-family: $fontMain;
     }
-    // div{
-    //     display: flex;
-    //     flex-direction: row;
-        
-    // }
+
+    .pie-row{
+        // @include flex(center,center,column);
+        @include flex(center,center,column);
+        margin: 0;
+
+        // breakpoint
+        @media only screen and (min-width: 992px){
+            @include flex(space-around,none,row);
+            flex-wrap: wrap;
+        }
+    }
+    .footer-col{
+        width: 25%;
+        @include m-p(15px 10px,0 15px);
+        @include flex(center,center,column);
+        flex-wrap: wrap;
+        align-content: center;
+
+        h3{
+            color: map-get($map: $colores, $key: 'tres');
+            font-size: $textMd;
+        }
+
+        .footer-icons{
+            display: flex;
+            flex-direction: row;
+            padding: 10px 15px;
+        }
+        .footer-contact{
+            display: flex;
+            flex-direction: column;
+        }
+    }
     .pie__icon--sm{
-        width: 30px;
+        width: 35px;
         color: map-get($map: $colores, $key: 'dos');
+
+        @media only screen and (min-width: 1024px){
+            width: 45px;
+        }
     }
     .ig-icon{
         &:hover{
@@ -45,21 +78,21 @@ footer{
             color: #25D366;
         }
     }
-    .pie__icon--right{
-        display: flex;
-        justify-content: flex-end;
+    // .pie__icon--right{
+    //     display: flex;
+    //     justify-content: flex-end;
 
-    }
+    // }
 
-    .pie__div--icon{
-        display: flex;
-        margin: auto;
+    // .pie__div--icon{
+    //     display: flex;
+    //     margin: auto;
         
 
-    }
-    .pie__div--redes{
-        @include flex(space-around,center,row);
-    }
+    // }
+    // .pie__div--redes{
+    //     @include flex(space-around,center,row);
+    // }
 
 
 }

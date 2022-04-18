@@ -36,12 +36,12 @@ html {
     margin-right: 10px; }
     @media only screen and (min-width: 992px) {
       .nav ul li {
-        border-left: 1px solid #758A9E;
+        border-left: 1px solid black;
         padding: 10px 5px; } }
     .nav ul li a {
       font-size: 2rem;
       text-decoration: none;
-      color: #758A9E;
+      color: black;
       display: block;
       padding: 0.5rem 1rem; }
       @media only screen and (min-width: 992px) {
@@ -122,11 +122,12 @@ h3 {
         width: 80%; } }
 
 .index .index__articulo--yo, .index .index__section--blog, .index .index__section--recetas {
-  background: linear-gradient();
-  width: 100%;
+  background-image: url(../img/recetas3.png);
+  background-size: cover;
+  width: 90%;
   height: auto;
-  margin: 10px auto;
-  padding: 10px 20px;
+  margin: 20px auto;
+  padding: 30px 25px;
   box-sizing: border-box;
   border: none; }
 
@@ -138,22 +139,23 @@ h3 {
   align-content: center; }
   .index .divButton a:hover {
     color: black; }
-  @media only screen and (min-width: 1024px) {
-    .index .divButton {
-      width: 70%; } }
   .index .divButton .btn-index {
     background-color: #E99481;
     margin-bottom: 10px;
+    margin: 10px;
     padding: 10px;
     width: 150px;
     cursor: pointer;
     display: flex;
     justify-content: center; }
-    .index .divButton .btn-index:hover {
-      transform: scale(1.1);
-      box-shadow: 5px 7px 5px 2px rgba(0, 0, 0, 0.75);
-      -webkit-box-shadow: 5px 7px 5px 2px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 5px 7px 5px 2px rgba(0, 0, 0, 0.75); }
+  @media only screen and (min-width: 1024px) {
+    .index .divButton {
+      width: 70%; } }
+  .index .divButton .btn-index:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 7px 5px 2px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 5px 7px 5px 2px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 7px 5px 2px rgba(0, 0, 0, 0.75); }
 
 @media only screen and (min-width: 1024px) {
   .index .divYo {
@@ -165,10 +167,30 @@ h3 {
     margin: 20px; } }
 
 .index .index__section--blog {
-  background-color: white; }
+  background-image: none; }
+
+.index .index__articulo--green {
+  background-color: #8DB173;
+  margin: 10px auto;
+  padding: 10px 20px;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 6px 10px 6px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 6px 10px 6px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 10px 6px 0px rgba(0, 0, 0, 0.75); }
+  @media only screen and (min-width: 992px) {
+    .index .index__articulo--green {
+      margin: 10px 10px; } }
+  @media only screen and (min-width: 1200px) {
+    .index .index__articulo--green {
+      width: 30%; } }
 
 .index .index__section--recetas {
-  background-color: #E99481; }
+  background-color: #8DB173;
+  background-image: none; }
 
 .index .index__div--flex {
   display: flex;
@@ -181,14 +203,17 @@ h3 {
       flex-direction: row; } }
 
 .index .index__articulo--white {
-  background-color: rgba(178, 190, 202, 0.5);
+  background-color: white;
   margin: 10px auto;
   padding: 10px 20px;
   width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
+  flex-direction: column;
+  box-shadow: 6px 10px 6px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 6px 10px 6px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 10px 6px 0px rgba(0, 0, 0, 0.75); }
   @media only screen and (min-width: 992px) {
     .index .index__articulo--white {
       margin: 10px 10px; } }
@@ -196,23 +221,27 @@ h3 {
     .index .index__articulo--white {
       width: 30%; } }
 
-.index .linkHover a:hover {
-  color: #317302;
-  font-weight: 600;
-  background-size: 100% 2px; }
+.index a:hover {
+  color: black; }
 
-@media only screen and (min-width: 992px) {
-  .index .linkHover a {
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 2px;
-    transition: background-size .3s; }
-    .index .linkHover a:hover {
-      color: #317302;
-      font-weight: 600;
-      background-size: 100% 2px;
-      cursor: pointer; } }
+.index .btn-index {
+  background-color: #E99481;
+  margin-bottom: 10px;
+  margin: 10px;
+  padding: 10px;
+  width: 150px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center; }
+  @media only screen and (min-width: 992px) {
+    .index .btn-index {
+      width: 70%; } }
+
+.index .btn-index:hover {
+  transform: scale(1.1);
+  box-shadow: 5px 7px 5px 2px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 5px 7px 5px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 7px 5px 2px rgba(0, 0, 0, 0.75); }
 
 .mainYo section article div p {
   text-align: center; }
@@ -429,9 +458,45 @@ footer p {
     color: #317302;
     display: flex;
     font-family: "Josefin Sans", sans-serif; }
+  .pie .pie-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0; }
+    @media only screen and (min-width: 992px) {
+      .pie .pie-row {
+        display: flex;
+        justify-content: space-around;
+        align-items: none;
+        flex-direction: row;
+        flex-wrap: wrap; } }
+  .pie .footer-col {
+    width: 25%;
+    margin: 15px 10px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center; }
+    .pie .footer-col h3 {
+      color: #317302;
+      font-size: 2.5rem; }
+    .pie .footer-col .footer-icons {
+      display: flex;
+      flex-direction: row;
+      padding: 10px 15px; }
+    .pie .footer-col .footer-contact {
+      display: flex;
+      flex-direction: column; }
   .pie .pie__icon--sm {
-    width: 30px;
+    width: 35px;
     color: #758A9E; }
+    @media only screen and (min-width: 1024px) {
+      .pie .pie__icon--sm {
+        width: 45px; } }
   .pie .ig-icon:hover {
     color: #C0007A; }
   .pie .fc-icon:hover {
@@ -440,14 +505,3 @@ footer p {
     color: #BB001B; }
   .pie .wh-icon:hover {
     color: #25D366; }
-  .pie .pie__icon--right {
-    display: flex;
-    justify-content: flex-end; }
-  .pie .pie__div--icon {
-    display: flex;
-    margin: auto; }
-  .pie .pie__div--redes {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: row; }

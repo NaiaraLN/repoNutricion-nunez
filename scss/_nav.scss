@@ -10,13 +10,13 @@
 
             // breakpoint - agrego animaciones
             @media only screen and(min-width: 992px){
-                border-left: 1px solid map-get($map: $colores, $key: 'dos');
+                border-left: 1px solid map-get($map: $colores, $key: 'nueve');
                 padding: 10px 5px;
             }
             a{
                 font-size: $textSm;
                 text-decoration: none;
-                color: map-get($map: $colores, $key: 'dos');
+                color: map-get($map: $colores, $key: 'nueve');
                 display: block;
                 padding: 0.5rem 1rem;
 
