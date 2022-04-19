@@ -28,6 +28,11 @@ footer{
         @include flex(center,center,column);
         flex-wrap: wrap;
         align-content: center;
+        
+        // breakpoint width
+        @media only screen and (max-width:992px){
+            width: auto;
+        }
 
         h3{
             color: map-get($map: $colores, $key: 'tres');
