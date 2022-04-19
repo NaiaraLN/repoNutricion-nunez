@@ -24,14 +24,14 @@ footer{
     }
     .footer-col{
         width: 25%;
-        @include m-p(15px 10px,0 15px);
+        margin: 10px 15px;
         @include flex(center,center,column);
         flex-wrap: wrap;
         align-content: center;
 
         h3{
             color: map-get($map: $colores, $key: 'tres');
-            font-size: $textMd;
+            @include text($textMd,3rem);
         }
 
         .footer-icons{
@@ -40,8 +40,7 @@ footer{
             padding: 10px 15px;
         }
         .footer-contact{
-            display: flex;
-            flex-direction: column;
+            @include flex(none,center,column);
             
             p{
                 color: map-get($map: $colores, $key: 'nueve');

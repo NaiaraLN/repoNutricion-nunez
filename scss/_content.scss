@@ -131,7 +131,6 @@ h3{
         // breackpoint
         @media only screen and (min-width: 992px){
             margin: 10px 10px;
-            // box-shadow: none;
             
         }
 
@@ -147,7 +146,6 @@ h3{
     .index__section--recetas{
         @extend .index__articulo--yo;
         background-color: map-get($map: $colores, $key: 'cinco');
-        // background-image: url(../img/recetas3.jpeg);
         background-image: none;
         h2{
             text-shadow: 3px 2px 2px rgba(246,242,168,0.71);
@@ -240,7 +238,7 @@ h3{
         @media only screen and (min-width: 1024px){
             div{
                 p{
-                    padding: 10px;
+                    @include m-p(0 15px,10px);
                 }
             }
         }
@@ -262,6 +260,7 @@ h3{
         @media only screen and (min-width: 1024px){
             @include flex(center,center,none);
             margin: 10px auto;
+            margin-left: 15px;
             width: $w-100;
         }
     }
@@ -330,6 +329,11 @@ h3{
             @include text($textXxl,5rem);
         }
     }
+    .card-body{
+        @media only screen and (min-width:1400px){
+            height: 220px;
+        }
+    }
     .card-blog{
         background-color: map-get($map: $colores, $key: 'seis');
     }
@@ -371,13 +375,6 @@ h3{
         box-sizing: border-box;
         border: none;
 
-        @media only screen and (min-width: 1024px){
-            div{
-                p{
-                    padding: 5px;
-                }
-            }
-        }
     }
     .recetas__titulo--xxl{
         @include text($textXl,3.5rem);
@@ -465,7 +462,7 @@ fieldset{
 
     .contacto__form--button{
         background-color: map-get($map: $colores, $key: 'cuatro');
-        color: map-get($map: $colores, $key: 'doce');
+        color: map-get($map: $colores, $key: 'nueve');
         font-family: $fontMain;
         font-size: $textSsm;
         @include flex(center,center,column);

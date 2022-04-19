@@ -262,6 +262,7 @@ h3 {
   border: none; }
   @media only screen and (min-width: 1024px) {
     .mainYo .main__yo--articulo div p {
+      margin: 0 15px;
       padding: 10px; } }
 
 .mainYo .yo__titulo--xxl {
@@ -284,6 +285,7 @@ h3 {
       align-items: center;
       flex-direction: none;
       margin: 10px auto;
+      margin-left: 15px;
       width: 100%; } }
 
 .mainYo .yo__img--md {
@@ -333,6 +335,10 @@ h3 {
       line-height: 5rem;
       font-weight: 400; } }
 
+@media only screen and (min-width: 1400px) {
+  .blog .card-body {
+    height: 220px; } }
+
 .blog .card-blog {
   background-color: #F6F2A8; }
 
@@ -360,9 +366,6 @@ h3 {
   padding: 20px 20px;
   box-sizing: border-box;
   border: none; }
-  @media only screen and (min-width: 1024px) {
-    .recetas .recetas__articulo div p {
-      padding: 5px; } }
 
 .recetas .recetas__titulo--xxl {
   font-size: 3.5rem;
@@ -443,7 +446,7 @@ fieldset {
         flex-direction: row; } }
   .contacto__articulo .contacto__form--button {
     background-color: #B2BECA;
-    color: white;
+    color: black;
     font-family: "Josefin Sans", sans-serif;
     font-size: 1.5rem;
     display: flex;
@@ -496,8 +499,7 @@ footer p {
         flex-wrap: wrap; } }
   .pie .footer-col {
     width: 25%;
-    margin: 15px 10px;
-    padding: 0 15px;
+    margin: 10px 15px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -506,13 +508,17 @@ footer p {
     align-content: center; }
     .pie .footer-col h3 {
       color: #317302;
-      font-size: 2.5rem; }
+      font-size: 2.5rem;
+      line-height: 3rem;
+      font-weight: 400; }
     .pie .footer-col .footer-icons {
       display: flex;
       flex-direction: row;
       padding: 10px 15px; }
     .pie .footer-col .footer-contact {
       display: flex;
+      justify-content: none;
+      align-items: center;
       flex-direction: column; }
       .pie .footer-col .footer-contact p {
         color: black; }
