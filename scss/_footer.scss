@@ -63,17 +63,22 @@ footer{
     .ig-icon{
         color: map-get($map: $colores, $key: 'nueve');
         &:hover{
-            color: #C0007A;
+            color: map-get($map: $colores, $key: 'dos');
         }
     }
     .fc-icon{
         color: map-get($map: $colores, $key: 'nueve');
         &:hover{
-            color: #1877F2;
+            color: map-get($map: $colores, $key: 'ocho');
         }
     }
 
 
+}
+.footer-error{
+    position: absolute;
+    bottom: 0;
+    width: $w-100;
 }
 
 
