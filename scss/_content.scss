@@ -495,10 +495,10 @@ fieldset{
 .imgError{
     @include flex(center,center,column);
     img{
-       width: $w-40 ;
+       width: $w-80 ;
 
-       @media only screen and(min-width: 992px){
-           width: $w-80;
+       @media only screen and(max-width: 992px){
+           width: $w-40;
        }
     }   
 }

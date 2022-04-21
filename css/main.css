@@ -478,10 +478,10 @@ fieldset {
   align-items: center;
   flex-direction: column; }
   .imgError img {
-    width: 40%; }
-    @media only screen and (min-width: 992px) {
+    width: 80%; }
+    @media only screen and (max-width: 992px) {
       .imgError img {
-        width: 80%; } }
+        width: 40%; } }
 
 .divError {
   display: flex;
