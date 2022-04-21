@@ -472,6 +472,11 @@ fieldset {
     text-align: center;
     color: black; }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; }
+
 .imgError {
   display: flex;
   justify-content: center;
@@ -609,6 +614,4 @@ footer p {
       color: #1877F2; }
 
 .footer-error {
-  position: absolute;
-  bottom: 0;
-  width: 100%; }
+  margin-top: auto; }

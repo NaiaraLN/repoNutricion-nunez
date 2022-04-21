@@ -492,6 +492,11 @@ fieldset{
 }
 
 // MAIN DE ERROR-404
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 .imgError{
     @include flex(center,center,column);
     img{
